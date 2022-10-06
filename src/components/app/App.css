@@ -1,0 +1,12 @@
+.wrapper {
+    margin: 50px auto;
+    max-width: 800px;
+    max-height: 400px;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-weight: 900;
+    color: green;
+}

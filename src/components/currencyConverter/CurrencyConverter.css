@@ -1,0 +1,26 @@
+.form {
+    height: 50px;
+}
+.input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 400px;
+}
+.input:hover {
+    border: 2px solid mediumblue;
+}
+.select {
+    margin-left: 5px;
+    width: 80px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+.select:hover {
+    border: 2px solid mediumblue;
+    cursor: pointer;
+}
+.option {
+    cursor: pointer;
+}

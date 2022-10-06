@@ -1,0 +1,13 @@
+.header {
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 2px mediumblue;
+    border-radius: 20px;
+}
+p{
+    width: 150px;
+    text-align: center;
+}
