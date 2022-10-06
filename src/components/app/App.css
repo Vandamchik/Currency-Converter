@@ -3,10 +3,28 @@
     max-width: 800px;
     max-height: 400px;
 }
+
+.title {
+    padding-top: 20px;
+    text-indent: 40px;
+    font-size: 32px;
+}
+
+.title-date {
+    color: red;
+}
+
 .loading {
     display: flex;
     justify-content: center;
     width: auto;
     font-weight: 900;
     color: green;
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        text-indent: 0;
+        text-align: center;
+    }
 }

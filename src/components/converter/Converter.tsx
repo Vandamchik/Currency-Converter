@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Convert.css';
-import {CurrencyConverter} from "../currencyConverter/CurrencyConverter";
+import { CurrencyConverter } from "../currencyConverter/CurrencyConverter";
 import axios from "axios";
-import {IRate} from "../../modules/modules";
+import { IRate } from "../../modules/modules";
+import { SyncOutlined } from "@ant-design/icons";
 
 
 export function Converter() {
@@ -17,7 +18,7 @@ export function Converter() {
     let toAmount:number, fromAmount:number
     if (amountInFromCurrency) {
         fromAmount = amount
-        toAmount = amount * exchangeRate!
+        toAmount = amount * exchangeRate!;
     }
     else {
         toAmount = amount
@@ -46,7 +47,7 @@ export function Converter() {
 
     useEffect(() => {
         fetchToFrom()
-    }, [fromCurrency,toCurrency])
+    }, [fromCurrency, toCurrency])
 
     function handelFromAmountChange( event: React.ChangeEvent<HTMLInputElement> ) {
         setAmount(+event.target.value)
@@ -58,10 +59,8 @@ export function Converter() {
         setAmountInFromCurrency(false)
     }
 
-
     return (
-        <div className="converter">
-            <h2>Currency Converter</h2>
+        <div className="container_converter">
             <CurrencyConverter
                 currencyOptions={ currencyOptions }
                 selectedCurrency={ fromCurrency }
@@ -70,7 +69,7 @@ export function Converter() {
                 onChangeAmount={ handelFromAmountChange }
                 amount={ fromAmount }
             />
-            <div>=</div>
+            <SyncOutlined className="iconCycle" />
             <CurrencyConverter
                 currencyOptions={ currencyOptions }
                 selectedCurrency={ toCurrency }

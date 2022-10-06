@@ -10,26 +10,28 @@ export function CurrencyConverter(props: any) {
         amount
     } = props;
 
-
     return (
         <div className="form">
             <input
             className="input"
+            placeholder="Enter amount and select currency which you want convert to"
             type="number"
-            value={amount || ""}
-            onChange={onChangeAmount}
+            value={ amount || "" }
+            onChange={ onChangeAmount }
             />
             <select
             className="select"
             value={ selectedCurrency }
             onChange={ onChangeCurrency }
             >
-                {currencyOptions.map((option:string[],index:number) =>
+                { currencyOptions.map((option:string[],index:number) =>
                     <option
                         key={`${ option } ${ index }`}
                         value={ option }
                         className="option"
-                    >{ option }</option>
+                    >
+                        { option }
+                    </option>
                 )}
             </select>
         </div>
